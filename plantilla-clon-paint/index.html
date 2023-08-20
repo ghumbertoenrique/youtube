@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clon de Paint</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Tool Bar -->
+    <div class="top-bar">
+      <!-- Active Tool -->
+      <div class="active-tool">
+        <span id="active-tool" title="Active Tool">Pincel</span>
+      </div>
+      <!-- Brush -->
+      <div class="brush tool">
+        <i class="fas fa-brush" id="brush" title="Pincel"></i>
+        <input type="color" />
+        <span class="size" id="brush-size" title="tamaño del pincel">10</span>
+        <input
+          type="range"
+          min="1"
+          max="50"
+          value="10"
+          class="slider"
+          id="brush-slider"
+        />
+      </div>
+      <!-- Bucket -->
+      <div class="bucket tool">
+        <i class="fas fa-fill-drip" title="Color de fondo"></i>
+        <input type="color" />
+      </div>
+      <!-- Eraser -->
+      <div class="tool">
+        <i class="fas fa-eraser" id="eraser" title="Borrador"></i>
+      </div>
+      <!-- Clear Canvas -->
+      <div class="tool">
+        <i class="fas fa-undo-alt" id="clear-canvas" title="Limpiar"></i>
+      </div>
+      <!-- Save Local Storage -->
+      <div class="tool">
+        <i
+          class="fas fa-download"
+          id="save-storage"
+          title="Guardado en el local storage"
+        ></i>
+      </div>
+      <!-- Load Local Storage -->
+      <div class="tool">
+        <i
+          class="fas fa-upload"
+          id="load-storage"
+          title="cargado desde el local storage"
+        ></i>
+      </div>
+      <!-- Clear Local Storage -->
+      <div class="tool">
+        <i
+          class="fas fa-trash-alt"
+          id="clear-storage"
+          title="Limpiar local storage"
+        ></i>
+      </div>
+      <!-- Download Image -->
+      <div class="tool">
+        <a id="download">
+          <i class="far fa-save" title="Guargar archivo de imagen"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
