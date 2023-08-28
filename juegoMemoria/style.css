@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.memory-game{
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    gap: 10px;
+}
+
+.card{
+    width: 100px;
+    height: 150px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flipped{
+    transform: rotateY(180deg);
+}
+.card .symbol{
+    display: none;
+}
+
+.card.flipped .symbol{
+    display: block;
+}
